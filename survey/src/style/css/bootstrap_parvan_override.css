@@ -1,0 +1,313 @@
+/* body {
+  direction: rtl;
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .navbar-header {
+    float: right;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin-left: unset;
+    margin-right: -15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: right;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: right;
+  }
+}
+
+.navbar-brand {
+  float: right;
+}
+
+.navbar-toggle {
+  float: left;
+  margin-left: 15px;
+  margin-right: unset;
+}
+
+.nav {
+  padding-right: 0;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav {
+    float: right;
+  }
+  .navbar-nav>li {
+    float: right;
+  }
+}
+
+.col-md-offset-3 {
+  margin-right: 25%;
+  margin-left: unset;
+}
+
+
+.col-md-offset-3 {
+  margin-right: 25%;
+  margin-left: unset;
+}
+
+.col-sm-offset-2 {
+  margin-right: 16.66666667%;
+  margin-left: unset;
+  
+}
+
+.radio-inline,
+.checkbox-inline {
+  padding-right: 20px;
+  padding-left: unset;
+}
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {  
+  margin-left: unset;
+  margin-left: 10px;
+  
+}
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {    
+  margin-right: -20px;
+  margin-left: unset
+} */
+
+@font-face {
+  font-family: Vazir;
+  src: url('../fonts/vazir-font-v17.1.1/Vazir.eot');
+  src: url('../fonts/vazir-font-v17.1.1/Vazir.eot?#iefix') format('embedded-opentype'), url('../fonts/vazir-font-v17.1.1/Vazir.woff2') format('woff2'), url('../fonts/vazir-font-v17.1.1/Vazir.woff') format('woff'), url('../fonts/vazir-font-v17.1.1/Vazir.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url('../fonts/vazir-font-v17.1.1/Vazir-Bold.eot');
+  src: url('../fonts/vazir-font-v17.1.1/Vazir-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/vazir-font-v17.1.1/Vazir-Bold.woff2') format('woff2'), url('../fonts/vazir-font-v17.1.1/Vazir-Bold.woff') format('woff'), url('../fonts/vazir-font-v17.1.1/Vazir-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url('../fonts/vazir-font-v17.1.1/Vazir-Light.eot');
+  src: url('../fonts/vazir-font-v17.1.1/Vazir-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/vazir-font-v17.1.1/Vazir-Light.woff2') format('woff2'), url('../fonts/vazir-font-v17.1.1/Vazir-Light.woff') format('woff'), url('../fonts/vazir-font-v17.1.1/Vazir-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url('../fonts/vazir-font-v17.1.1/Vazir-Medium.eot');
+  src: url('../fonts/vazir-font-v17.1.1/Vazir-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/vazir-font-v17.1.1/Vazir-Medium.woff2') format('woff2'), url('../fonts/vazir-font-v17.1.1/Vazir-Medium.woff') format('woff'), url('../fonts/vazir-font-v17.1.1/Vazir-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url('../fonts/vazir-font-v17.1.1/Vazir-Thin.eot');
+  src: url('../fonts/vazir-font-v17.1.1/Vazir-Thin.eot?#iefix') format('embedded-opentype'), url('../fonts/vazir-font-v17.1.1/Vazir-Thin.woff2') format('woff2'), url('../fonts/vazir-font-v17.1.1/Vazir-Thin.woff') format('woff'), url('../fonts/vazir-font-v17.1.1/Vazir-Thin.ttf') format('truetype');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "ParvanYekan";
+  src: url('../fonts/wyekan-font/wYekan.eot?#') format('eot'), url('../fonts/wyekan-font/wYekan.woff') format("woff"), url('../fonts/wyekan-font/wYekan.ttf') format("truetype");
+}
+
+body {
+  font-size: 14px;
+}
+
+html {
+  height: 100%;
+  font-family: Vazir;
+}
+
+body {
+  position: relative;
+  padding-bottom: 20rem;
+  padding-top: 10rem;
+  min-height: 100%;
+  font-family: Vazir;
+}
+
+.footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 100px;
+  color: #777;
+  text-align: center;
+  border-top: 1px solid #f5f5f5;
+  background-color: #f5f5f5;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* height: 180px; */
+}
+
+.btn-toolbar {
+  margin-bottom: 20px;
+}
+
+.question-unanswer-error {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.question {
+  padding-top: 100px;
+}
+
+.selected-node {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.question-options {
+  padding-right: 45px;
+}
+
+.question-number {
+  font-family: ParvanYekan;
+  font-size: 17px;
+  font-weight: bold;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 10px 5px;
+  line-height: 1;
+  color: #969494;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  /* border: 2px solid #000; */
+  /* border-radius: 40px; */
+}
+
+.persian-date {
+  font-family: ParvanYekan;
+  font-size: 16px;
+}
+
+.btn-tag {
+  background-color: #eee;
+}
+
+.btn-tag:active, .btn-tag.active, .open>.dropdown-toggle.btn-tag {
+  /* background-color: #B1B5B7; */
+  background-color: #31b0d5;
+  color: #fff;
+}
+
+#surveys .card-view {
+  height: 250px;
+  _border: 1px solid lime;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+#topSurveys .card-view {
+  height: 150px;
+  _border: 1px solid lime;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.page-header-title-label {
+  color: #777;
+}
+
+.card-view.rnd-color-0 {
+  background-color: #f0efef;
+  /* background-color: #F6EBEA; */
+}
+
+.card-view.rnd-color-1 {
+  background-color: #ddeedd;
+  /* background-color:#F3F8F8; */
+}
+
+.card-view.rnd-color-2 {
+  background-color: #c2d4dd;
+  /* background-color:#F1E8E1; */
+}
+
+.card-view.rnd-color-3 {
+  background-color: #b0aac0;
+  /* background-color:	#F8F7F4; */
+}
+
+.card-view.rnd-color-4 {
+  background-color: #f0efef;
+  /* background-color:	#F5F4F3; */
+}
+
+.card-view.rnd-color-5 {
+  background-color: #ddeedd;
+  /* background-color: #F6EBEA; */
+}
+
+.card-view.rnd-color-6 {
+  background-color: #c2d4dd;
+  /* background-color:#F3F8F8; */
+}
+
+.card-view.rnd-color-7 {
+  background-color: #b0aac0;
+  /* background-color:#F1E8E1; */
+}
+
+.card-view.rnd-color-8 {
+  background-color: #f0efef;
+  /* background-color:	#F8F7F4; */
+}
+
+.card-view.rnd-color-9 {
+  background-color: #ddeedd;
+  /* background-color:	#F5F4F3; */
+}
+
+.survey-history-card {
+  background-color: #fbfbfb;
+}
+
+.question-option-body {
+  padding: 1px 7px;
+  border-radius: 4px;
+}
+.question-option-body-readonly{
+  padding: 1px 7px;
+  border-radius: 4px;
+  color: #969494;
+}
+
+.question-option-body:hover {
+  background-color: #d0d2d2;
+  _color:navy;  
+}
+
+.question-option-body-selected {
+  font-weight: bold;
+  color: #286090;
+  
+  background-color: #ddf7ff;
+  
+}

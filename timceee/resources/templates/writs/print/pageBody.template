@@ -1,0 +1,3 @@
+<div class="print-content">
+    <div class="row">{{body}}</div>
+</div>

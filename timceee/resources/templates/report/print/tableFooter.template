@@ -1,0 +1,28 @@
+<tfoot>
+    <tr>
+        {{tableFooter}}
+    </tr>
+    </tfoot>
+</table>
+<div class="row">
+    <div class="col3">
+        {{fullName0}}
+        <br />
+        {{position0}}
+    </div>
+    <div class="col3">
+        {{fullName1}}
+        <br />
+        {{position1}}
+    </div>
+    <div class="col3">
+        {{fullName2}}
+        <br />
+        {{position2}}
+    </div>
+    <div class="col3">
+        {{fullName3}}
+        <br />
+        {{position3}}
+    </div>
+</div>

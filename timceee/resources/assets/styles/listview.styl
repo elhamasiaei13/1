@@ -1,0 +1,28 @@
+@import "~nib/index.styl"
+
+.listview
+  .ant-table-pagination
+    float none !important
+  .ant-pagination-total-text
+    display block
+    margin-bottom 8px
+  .ant-pagination-options
+    display block
+    margin-top 8px
+
+html[data-direction="rtl"]
+body[data-direction="rtl"]
+  .listview
+    .ant-pagination-options-size-changer
+      margin-right 0
+      margin-left 8px
+  .ant-pagination-jump-next:focus:after
+  .ant-pagination-jump-next:hover:after
+    content "\E620\E620"
+  .ant-pagination-jump-prev:focus:after
+  .ant-pagination-jump-prev:hover:after
+    content "\E61F\E61F"
+  .ant-pagination-jump-prev
+  .ant-pagination-jump-next
+    margin-right 0 !important
+    margin-left 0 !important

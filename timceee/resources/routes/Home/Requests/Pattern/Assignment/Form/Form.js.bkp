@@ -1,0 +1,151 @@
+import React from 'react';
+import {connect} from 'react-redux';
+import {Card, Button, Row, Col} from 'antd';
+import Spin from 'components/common/Spin';
+import PropTypes from 'prop-types';
+import PersonnelList from 'routes/Home/Basic/Personnel/List/ListWrapper';
+import PositionsList from 'routes/Home/Requests/Procedure/Form/Applicants';
+import {show} from 'routes/Home/Requests/Pattern/RulePack/Module';
+import {updateUsers, updatePositions} from './../Module';
+
+@connect((state) => ({
+  rulePack: state.Requests.Pattern.RulePack.rulePack,
+}), {
+  show,
+  updateUsers,
+  updatePositions,
+})
+@autobind
+/**
+ *
+ */
+export default class Form extends React.PureComponent {
+  static propTypes = {
+    onCancel: PropTypes.func,
+    show: PropTypes.func,
+    updateUsers: PropTypes.func,
+    updatePositions: PropTypes.func,
+    rulePack: PropTypes.object,
+    item: PropTypes.object,
+  };
+  static defaultProps = {
+    rulePack: {},
+  };
+
+  /**
+   *
+   * @param {Object} props
+   */
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      receiving: true,
+      saving: false,
+    };
+  }
+
+  /**
+   *
+   */
+  componentDidMount() {
+    const {show, item} = this.props;
+
+    show(item.id, {
+      includes: [
+        'positions,ids',
+        'users:ids',
+      ],
+    }, () => this.setState({receiving: false}));
+  }
+
+  /**
+   *
+   * @private
+   */
+  _submit() {
+    const {updateUsers, updatePositions, item, onCancel} = this.props;
+
+    this.setState({
+      saving: true,
+    }, () => {
+      let users = this.personnelList.selected();
+      let positions = this.positionsList.selected();
+
+      updateUsers(item.id, users, null, (err1) => updatePositions(item.id, positions, null, (err2) => this.setState({saving: false}, () => !err1 && !err2 && onCancel())));
+    });
+  }
+
+  /**
+   *
+   * @return {XML}
+   */
+  render() {
+    const {receiving, saving} = this.state;
+    const {onCancel, rulePack} = this.props;
+    return (
+      <Spin
+        wrapperClassName="wrapper"
+        spinning={receiving}
+      >
+        <Card
+          title={app.translate('routes.Assignment')}
+          extra={
+            <Button.Group>
+              <Button
+                type="danger"
+                disabled={saving}
+                onClick={() => onCancel()}
+              >{app.translate('main.Cancel')}</Button>
+              <Button
+                type="primary"
+                loading={saving}
+                onClick={this._submit}
+              >{app.translate('main.Submit')}</Button>
+            </Button.Group>
+          }
+          style={{
+            height: '100%',
+          }}
+        >
+
+          <Row
+            gutter={16}
+            style={{
+              height: '100%',
+              margin: 0,
+            }}
+          >
+
+            <Col
+              md={12}
+              style={{
+                height: '100%',
+              }}
+            >
+              <PersonnelList
+                reference={(input) => this.personnelList = input}
+                selected={rulePack.users || []}
+              />
+            </Col>
+
+            <Col
+              md={12}
+              style={{
+                height: '100%',
+              }}
+            >
+              <PositionsList
+                title={app.translate('routes.home.basic.organization-chart.Positions')}
+                ref={(input) => this.positionsList = input && input.getWrappedInstance()}
+                selected={rulePack.positions || []}
+              />
+            </Col>
+
+          </Row>
+
+        </Card>
+      </Spin>
+    );
+  }
+}

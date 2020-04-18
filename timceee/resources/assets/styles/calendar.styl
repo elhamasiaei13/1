@@ -1,0 +1,90 @@
+.calendar
+  > .ant-card-body
+    overflow-y auto
+  .month
+    text-align center
+    .month-name
+      height 32px
+      &:hover
+        border-radius 8px 8px 0 0
+        cursor pointer
+        background rgba(0, 0, 0, .2)
+    .week-day
+      height 32px
+      cursor default
+      width calc(100% / 7)
+      &.selectable
+        &:hover
+          border-radius 8px 8px 0 0
+          cursor pointer
+          background rgba(0, 0, 0, .2)
+    table
+      thead
+        tr
+          th
+            font-size 1rem
+  .day
+    //overflow hidden
+    position relative
+    height 32px
+    width calc(100% / 7)
+    &.today
+      border-radius 4px
+      border 2px solid rgba(#03a9f4, 0.55)
+      //&::before
+      //  position absolute
+      //  content ''
+      //  width 25px
+      //  height 15px
+      //  background rgba(3, 169, 244, 0.85)
+      //  transform rotate(45deg)
+      //  top -5px
+      //  right -10px
+      //  box-shadow 0 0 5px 1px rgba(3, 169, 244, 0.85)
+    &.empty
+      height 32px
+    &.disabled
+      color: #9e9e9e
+      cursor: not-allowed
+    &.selected
+      border-radius 8px
+      background rgba(0, 0, 0, .4)
+    &.range
+      background rgba(0, 0, 0, .3)
+      &.selecting
+        background rgba(33, 150, 243, .3) !important
+        &:hover
+          border-radius 8px
+      &.start
+        border-radius 0 8px 8px 0
+      &.end
+        border-radius 8px 0 0 8px
+      &.start
+      &.end
+        background rgba(0, 0, 0, .3)
+    &:hover
+      &:not(.disabled)
+        &:not(.empty)
+          border-radius 8px
+          cursor pointer
+          background rgba(0, 0, 0, .2)
+  .ant-card-head
+    padding 0 8px !important
+  .ant-btn:not(.ant-btn-circle):not(.ant-btn-circle-outline).ant-btn-icon-only
+    padding-left 8px
+    padding-right 8px
+
+.calendar-events
+  .ant-popover-title
+    .left
+      &:after
+        content ''
+        padding 0 8px
+  .ant-popover-inner-content
+    div
+      display flex
+      line-height 1.5rem
+      p
+        &:before
+          content ''
+          padding 0 4px

@@ -1,0 +1,23 @@
+{
+  "one item should be selected at list": "one item should be selected at list",
+  "showTitle": "Show Title",
+  "showFooter": "Show sum",
+  "true": "Yes",
+  "false": "No",
+  "Separator": "Separator",
+  "Default": "Default",
+  "YMD": "YMD",
+  "YMDHIS": "YMDHIS",
+  "HIS": "HIS",
+  "H-I-S": "H:I:S",
+  "Y-M-D": "Y-M-D",
+  "Y_M_D": "Y/M/D",
+  "Y-M-D-H-I-S": "Y-M-D H:I:S",
+  "Y_M_D-H-I-S": "Y/M/D H:I:S",
+  "save CustomReports success": "save CustomReports success",
+  "save CustomReports fault": "save CustomReports fault",
+  "load CustomReports success": "load CustomReports success",
+  "load CustomReports fault": "load CustomReports fault",
+  "Default null": "No Space",
+  "INT" : "int"
+}

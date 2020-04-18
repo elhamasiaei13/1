@@ -1,0 +1,9 @@
+{
+  "Select Image And Crop": "Select Image And Crop",
+  "Reset":"Reset",
+  "Submit":"Submit",
+  "Cancel":"Cancel",
+  "error size": "The image size is larger than {{size}} KB",
+  "error types": "The file extension is not valid",
+  "error type": "File type must be image"
+}

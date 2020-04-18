@@ -1,0 +1,10 @@
+{
+  "404": "{{target}}(s) not found",
+  "422-exists": "Entered {{target}} alreadi exists",
+  "422-required": "{{target}} is required",
+  "422-unique": "{{target}} is unique",
+  "429": "Too many requests",
+  "500": "Sorry, our fault! internal server error",
+  "err": "Error {{code}}",
+  "internal": "Sorry, our fault! internal application error"
+}

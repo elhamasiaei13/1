@@ -1,0 +1,93 @@
+.auth
+  > .ant-row
+    [class*='ant-col-']
+      div
+        &.ant-form-item
+          &.ant-form-item-with-help
+            height inherit
+  &:before
+    content ''
+    margin: -8px
+    top 0
+    bottom 0
+    left 0
+    right 0
+    z-index -1
+    position absolute
+    background-image url(./../images/login-bg.jpeg)
+    background-position center
+    background-size cover
+    filter blur(5px) opacity(.7)
+  .center
+    position absolute
+    width 100%
+    top 50%
+    transform translateY(-50%)
+    .ant-select-selection__rendered
+      line-height 27px
+    img
+      &.logo
+        position absolute
+        background #fff
+        border 2px solid #fff
+        width 100px
+        height 100px
+        top -50px
+        border-radius 50%
+        box-shadow 0px -3px 6px rgba(0, 0, 0, .2)
+    i
+      &.logo
+        position absolute
+        background #fff
+        border 2px solid #fff
+        width 100px
+        height 100px
+        top -50px
+        border-radius 50%
+        box-shadow 0px -3px 6px rgba(0, 0, 0, .2)
+        &:before
+          height 100px
+          width 100px
+          font-size 85px
+          text-align center
+          line-height 100px
+    .title
+      text-align center
+      margin-top 50px
+    .copyrights
+      margin-top 8px
+    .options
+      display inline-flex
+      margin-top 8px
+      > .item
+        display flex
+        font-weight bold
+        cursor pointer
+        &:not(:last-child)
+          &:after
+            content ""
+            margin 0 8px
+            cursor default
+    .ant-card
+      box-shadow 0 3px 6px rgba(0, 0, 0, .2)
+      &:hover
+        box-shadow 0 4px 8px rgba(0, 0, 0, .3)
+html[data-direction="ltr"]
+body[data-direction="ltr"]
+  .auth
+    .center
+      > [class^="ant-col-"]
+      > [class*=" ant-col-"]
+      .logo
+        left 50%
+        transform translateX(-50%)
+
+html[data-direction="rtl"]
+body[data-direction="rtl"]
+  .auth
+    .center
+      > [class^="ant-col-"]
+      > [class*=" ant-col-"]
+      .logo
+        right 50%
+        transform translateX(50%)

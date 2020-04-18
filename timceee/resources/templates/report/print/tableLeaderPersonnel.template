@@ -1,0 +1,41 @@
+<div class="report-head">
+    <div class="float-right">
+        <div>
+            <span>نام</span>:
+            <span>{{personName}}</span>
+            <div style="display: inline-block; margin-right: 10%">
+                <span>نام خانوادگی</span>:
+                <span>{{personFamily}}</span>
+            </div>
+        </div>
+        <div>
+            <span>شماره پرسنلی</span>:
+            <span>{{personCode}}</span>
+            <div style="display: inline-block; margin-right: 10%">
+                <span>نوع استخدام</span>:
+                <span>{{recruitmentType}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="float-right center">
+        <h2>{{tableTitle}}</h2>
+    </div>
+    <div class="float-right text-left">
+        <div>
+            <span>تاریخ گزارش گیری</span>:
+            <span>{{reportDate}}</span>
+        </div>
+        <div>
+            <span>از تاریخ</span>:
+            <span>{{dateFrom}}</span>
+            <span>تا تاریخ</span>:
+            <span>{{dateTo}}</span>
+
+            <div style="display: inline-block; margin-right: 10%">
+                <span>صفحه</span>:
+                <span>{{pageNumber}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>

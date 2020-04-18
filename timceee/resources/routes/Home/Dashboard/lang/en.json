@@ -1,0 +1,17 @@
+{
+  "SpiderChart CardView Title": "SpiderChart CardView Title",
+  "SpiderChart Title": "SpiderChart Title",
+  "PieChart CardView Title": "PieChart CardView Title",
+  "PieChart Title": "PieChart Title",
+  "FixedPlacementChart CardView Title": "FixedPlacementChart CardView Title",
+  "FixedPlacementChart Title": "FixedPlacementChart Title",
+  "HeatMapChart CardView Title": "HeatMapChart CardView Title",
+  "HeatMapChart Title": "HeatMapChart Title",
+  "HeatMapChart TooltipText": "HeatMapChart TooltipText",
+  "BasicColumnChart CardView Title": "BasicColumnChart CardView Title",
+  "BasicColumnChart Title": "BasicColumnChart Title",
+  "DrillDownChart CardView Title": "DrillDownChart CardView Title",
+  "DrillDownChart Title": "DrillDownChart Title",
+  "DrillDownChart TooltipText": "Department",
+  "DrillDownChart BackTo": "Back to {{to}}s »"
+}

@@ -1,0 +1,332 @@
+import React from 'react';
+import { reduxForm, Field } from 'redux-form';
+import { connect } from 'react-redux';
+import { Card, Row, Col, Button, Tabs } from 'antd';
+import { Text, TextArea, Password, Cascader, Date, Time, Toggle } from 'components/redux-form';
+import PropTypes from 'prop-types';
+import MaterialIcon from 'components/common/MaterialIcon';
+import validate from './validate';
+import asyncValidate from './asyncValidate';
+import { indexGroups, update, request, emptyGroups } from './../../../Module';
+
+@reduxForm({
+  form: 'devices-raden-rf900-settings',
+  validate,
+  asyncValidate,
+  onSubmit: (values, dispatch, props) => {
+    let data = app._.cloneDeep(values);
+
+    if (data.menuPassword) {
+      dispatch(request(props.device.id, 'changeMenuPassword', { password: data.menuPassword }));
+    }
+
+    if (data.usbPortPassword) {
+      dispatch(request(props.device.id, 'changeFlashAccessPassword', { password: data.usbPortPassword }));
+    }
+
+    if (data.powerOffPassword) {
+      dispatch(request(props.device.id, 'changePowerOffPassword', { password: data.powerOffPassword }));
+    }
+
+    if (data.date && data.time) {
+      dispatch(request(props.device.id, 'setDatetime', {
+        datetime: data.date.substr(0, 4) + '-' + data.date.substr(5, 2) + '-' + data.date.substr(8, 2) + ' ' + data.time.substr(0, 8),
+      }));
+    }
+
+    if (data.resetPresent) {
+      dispatch(request(props.device.id, 'resetPresent', null));
+    }
+
+    data.deviceGroupId = data.deviceGroupId[data.deviceGroupId.length - 1];
+
+    dispatch(update(props.device.id, data, props.onCancel));
+  },
+})
+@connect((state) => ({
+  groups: state.Attendance.Device.groups,
+}), {
+  indexGroups,
+  emptyGroups,
+})
+@autobind
+/**
+ *
+ */
+export default class Settings extends React.PureComponent {
+  static propTypes = {
+    device: PropTypes.object,
+    submit: PropTypes.func,
+    onCancel: PropTypes.func,
+    initialize: PropTypes.func,
+    indexGroups: PropTypes.func,
+    emptyGroups: PropTypes.func,
+    groups: PropTypes.arrayOf(PropTypes.object),
+  };
+
+  /**
+   *
+   * @param {Object} props
+   */
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      groups: [],
+    };
+  }
+
+  /**
+   *
+   */
+  componentDidMount() {
+    const { device, initialize, indexGroups } = this.props;
+
+    indexGroups({
+      includes: [
+        'children',
+        'children.children',
+      ],
+      filterGroups: [{
+        filters: [{
+          key: 'device_group_id',
+          value: null,
+          operator: 'eq',
+        }],
+      }],
+    }, (err, res) => {
+      if (!err) {
+        let _device = app._.cloneDeep(device);
+
+        _device.deviceGroupId = this._getGroupIds(res.data.deviceGroups, _device.deviceGroupId);
+
+        _device.port = `${_device.port}`;
+
+        initialize(_device);
+      }
+    });
+  }
+
+  /**
+   *
+   * @param {Object} np
+   */
+  componentWillReceiveProps(np) {
+    if (!app._.isEqual(this.props.groups, np.groups) || (np.groups.length !== 0 && this.state.groups.length === 0)) {
+      this.setState({
+        groups: this._renderGroups(np.groups),
+      });
+    }
+  }
+
+  /**
+   *
+   */
+  componentWillUnmount() {
+    super.componentWillUnmount();
+
+    this.props.emptyGroups();
+  }
+
+  /**
+   *
+   * @param {Object[]} groups
+   * @param {Number} group
+   * @return {String[]}
+   * @private
+   */
+  _getGroupIds(groups, group) {
+    let _ids = [];
+
+    groups.map((_group) => {
+      if (_group.id === group) {
+        _ids.push(_group.id);
+      } else if (!app._.isEmpty(_group.children)) {
+        let _id = this._getGroupIds(_group.children, group);
+
+        if (_id.length > 0) {
+          _ids.push(_group.id, ..._id);
+        }
+      }
+    });
+
+    return _ids;
+  }
+
+  /**
+   *
+   * @param {Object[]} groups
+   * @return {Object[]}
+   * @private
+   */
+  _renderGroups(groups) {
+    let _groups = [];
+
+    groups.map((group) => {
+      let _group = {
+        value: group.id,
+        label: group.name,
+      };
+
+      if (!app._.isEmpty(group.children)) {
+        _group.children = this._renderGroups(group.children);
+      }
+
+      _groups.push(_group);
+    });
+
+    return _groups;
+  }
+
+  /**
+   *
+   * @return {XML}
+   */
+  render() {
+    const { onCancel, submit } = this.props;
+    const { groups } = this.state;
+
+    return (
+      <Card
+        className="wrapper"
+        title={app.translate('routes.home.attendance.device.Settings')}
+        extra={
+          <Button.Group>
+            <Button
+              type="danger"
+              onClick={() => onCancel()}
+            >
+              {app.translate('main.Cancel')}
+            </Button>
+            <Button
+              type="primary"
+              onClick={submit}
+            >
+              {app.translate('main.Submit')}
+            </Button>
+          </Button.Group>
+        }
+      >
+        <Row
+          gutter={16}
+          style={{
+            height: '100%',
+          }}
+        >
+
+          <Col md={12} lg={8}>
+            <Field
+              name="name"
+              label={app.translate('routes.home.attendance.device.Name')}
+              prefix={<MaterialIcon name="alphabetical"/>}
+              required
+              component={Text}
+            />
+          </Col>
+
+          <Col md={12} lg={16}>
+            <Field
+              name="description"
+              label={app.translate('main.Description')}
+              prefix={<MaterialIcon name="alphabetical"/>}
+              component={TextArea}
+            />
+          </Col>
+
+          <Col md={12} lg={8}>
+            <Field
+              name="address"
+              label={app.translate('routes.home.attendance.device.Address')}
+              prefix={<MaterialIcon name="network"/>}
+              placeholder="192.168.1.2"
+              required
+              component={Text}
+            />
+          </Col>
+
+          <Col md={12} lg={8}>
+            <Field
+              name="port"
+              label={app.translate('routes.home.attendance.device.Port')}
+              prefix={<MaterialIcon name="numeric"/>}
+              placeholder="8080"
+              component={Text}
+            />
+          </Col>
+
+          <Col md={12} lg={8}>
+            <Field
+              name="password"
+              label={app.translate('routes.home.attendance.device.Password')}
+              prefix={<MaterialIcon name="keyboard-variant"/>}
+              component={Password}
+            />
+          </Col>
+
+          <Col md={12} lg={8}>
+            <Field
+              name="deviceGroupId"
+              label={app.translate('routes.home.attendance.device.Type')}
+              items={groups}
+              defaultValue={[1, 3]}
+              required
+              component={Cascader}
+            />
+          </Col>
+
+          <Col md={12} lg={8}>
+            <Field
+              name="date"
+              label={app.translate('routes.home.attendance.device.Date')}
+              component={Date}
+            />
+          </Col>
+
+          <Col md={12} lg={8}>
+            <Field
+              name="time"
+              label={app.translate('routes.home.attendance.device.Time')}
+              component={Time}
+            />
+          </Col>
+
+          <Col md={12} lg={8}>
+            <Field
+              name="menuPassword"
+              label={app.translate('routes.home.attendance.device.Menu Password')}
+              prefix={<MaterialIcon name="keyboard-variant"/>}
+              component={Password}
+            />
+          </Col>
+
+          <Col md={12} lg={8}>
+            <Field
+              name="usbPortPassword"
+              label={app.translate('routes.home.attendance.device.USB Port Password')}
+              prefix={<MaterialIcon name="keyboard-variant"/>}
+              component={Password}
+            />
+          </Col>
+
+          <Col md={12} lg={8}>
+            <Field
+              name="powerOffPassword"
+              label={app.translate('routes.home.attendance.device.Power Off Password')}
+              prefix={<MaterialIcon name="keyboard-variant"/>}
+              component={Password}
+            />
+          </Col>
+
+          <Col md={12} lg={8}>
+            <Field
+              name="resetPresents"
+              label={app.translate('routes.home.attendance.device.Reset Presents')}
+              component={Toggle}
+            />
+          </Col>
+
+        </Row>
+      </Card>
+    );
+  }
+}

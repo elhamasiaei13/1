@@ -1,0 +1,21 @@
+<div class="print-page">
+    <h3>{{pageLead}}</h3>
+    <div class="print-head">
+        <div class="float-right">
+            <div></div>
+        </div>
+        <div class="float-right center">
+            <h2>{{title}}</h2>
+        </div>
+        <div class="float-left text-left">
+            <div>
+                <span>تاریخ چاپ</span>:
+                <span>{{printDate}}</span>
+            </div>
+            <div>
+                <span>صفحه</span>:
+                <span>{{page}}</span>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>

@@ -1,0 +1,12 @@
+<div class="report-head">
+    <div class="float-right">
+        <h2>{{tableTitle}}</h2>
+    </div>
+    <div style="float: left; text-align:left; line-height: 42px;">
+        <div>
+            <span>تاریخ گزارش گیری</span>:
+            <span>{{reportDate}}</span>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>

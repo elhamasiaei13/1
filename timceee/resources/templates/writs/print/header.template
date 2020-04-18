@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{pageTitle}}</title>
+    <link rel="stylesheet" href="/src/app.css" />
+    <meta charset="utf-8"/>
+    <style type="text/css">
+
+        @font-face {
+            font-family: "samim";
+            src: url("/src/fonts/Samim-FD.ttf");
+        }
+
+        body {
+            text-align: right;
+            font-family: samim, serif;
+            direction: rtl;
+            font-size: 10px;
+        }
+        @media print{
+            body {
+                -webkit-print-color-adjust: exact;
+                font-family: samim, serif;
+            }
+            .cl{
+                -webkit-print-color-adjust: exact;
+                background: #000;
+            }
+        }
+
+        body {
+            text-align: right;
+            font-family: samim, serif;
+            direction: rtl;
+            font-size: 10px;
+        }
+
+        .float-right {
+            float: right;
+        }
+
+        .text-left {
+            float: left;
+            text-align: left;
+        }
+        .print-page:not(:first-child){
+            page-break-before: always;
+        }
+        .print-head{
+            background: #f2f2f2;
+        }
+        .print-head,
+        .print-content{
+            border: 1px solid black;
+            border-bottom: none;
+            padding: 5px 3%;
+        }
+        .print-footer{
+            border-top: 1px solid black;
+            padding: 5px 3%;
+            text-align: center;
+            color: #666666;
+        }
+
+        .print-head > div {
+            width: 33.333%;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .sp-large {
+            font-size: 1.5em;
+            padding: 3px 15px;
+        }
+        .print-page:after{
+            clear: both;
+            display: inline-block;
+        }
+        .print-page h3 {
+            margin: 0px auto;
+            text-align: center;
+            padding: 0px;
+        }
+        [class^="ant-col-"],
+        [class*=" ant-col-"],
+        .ant-steps-vertical .ant-steps-head {
+            float: right;
+            width: 50%;
+            flex: 0 0 auto;
+        }
+        .row {
+            position: relative;
+            margin-left: 0px;
+            margin-right: 0px;
+            height: auto;
+            zoom: 1;
+            display: block;
+        }
+        .row:after {
+            content:'';
+            clear: both;
+            display:block;
+            visibility: hidden;
+            font-size: 0;
+            height: 0;
+        }
+        .listTooltip > span {
+            float: right;
+            margin-left: 6px;
+            margin-right: 0px;
+        }
+        .listTooltip > i {
+            float: left;
+            margin-right: 0px;
+            margin-left: 0px;
+        }
+        {{pageStyle}}
+    </style>
+</head>
+<body>
+<div>

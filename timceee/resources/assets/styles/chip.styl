@@ -1,0 +1,34 @@
+.chip
+  display flex
+  width -webkit-fit-content
+  margin 4px
+  border-radius 16px
+  line-height 2rem
+  background-color rgb(224, 224, 224)
+  &:hover
+    background-color rgb(206, 206, 206)
+    cursor pointer
+  &:active
+    box-shadow rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px
+  .content
+    font-size 14px
+    padding 0 12px
+  > .mdi
+    display inline-block
+    font-size 1.5rem
+    height 2rem
+    color rgba(0, 0, 0, 0.26)
+    &:hover
+      color rgba(0, 0, 0, 0.4)
+
+html[data-direction="ltr"]
+body[data-direction="ltr"]
+  .chip
+    > .mdi
+      margin 0 4px 0 0
+
+html[data-direction="rtl"]
+body[data-direction="rtl"]
+  .chip
+    > .mdi
+      margin 0 0 0 4px

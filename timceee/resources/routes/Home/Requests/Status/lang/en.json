@@ -1,0 +1,11 @@
+{
+  "Request Status": "Request Status",
+  "Title": "Request Status",
+  "Confirm": "Are you sure you want to confirm the request?",
+  "Confirms": "Are you sure you want to confirm the selected requests?",
+  "Check": "Check",
+  "Accept": "Accept",
+  "status": "Accepted",
+  "Indexing Request Statuses Failed": "Indexing Request Statuses Failed",
+  "Showing Request Statuses Failed": "Showing Request Statuses Failed"
+}

@@ -1,0 +1,12 @@
+{
+  "This field should be greater than the start time" : "This field should be greater than the start time",
+  "Date": "Date",
+  "Time From": "Time From",
+  "Time To": "Time To",
+  "clock_in": "clock in",
+  "clock_out": "clock out",
+  "attendance": "attendance",
+  "in": "clock in",
+  "out": "clock out",
+  "indeterminate": "attendance"
+}

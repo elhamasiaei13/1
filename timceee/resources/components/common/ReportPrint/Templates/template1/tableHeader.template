@@ -1,0 +1,6 @@
+<table class="report-table">
+        <thead>
+        <tr>
+            {{tableHeader}}
+        </tr>
+        </thead>

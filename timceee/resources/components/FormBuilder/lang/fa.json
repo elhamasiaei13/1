@@ -1,0 +1,12 @@
+{
+  "This field should be greater than the start time": "این فیلد باید از زمان شروع بزرگتر باشد",
+  "Date": "تاریخ",
+  "Time From": "از ساعت",
+  "Time To": "تا ساعت",
+  "clock_in": "ورود",
+  "clock_out": "خروج",
+  "attendance": "اعلام حضور",
+  "in": "ورود",
+  "out": "خروج",
+  "indeterminate": "اعلام حضور"
+}

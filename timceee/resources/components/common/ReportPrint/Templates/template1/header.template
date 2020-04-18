@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{pageTitle}}</title>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+
+        @font-face {
+            font-family: "samim";
+            src: url("fonts/IRANSans-web.ttf");
+        }
+
+        body {
+            text-align: right;
+            font-family: samim, serif;
+            direction: rtl;
+            font-size: 10px;
+        }
+
+        .float-right {
+            float: right;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .report-head:not(:first-child) {
+            page-break-before: always;
+        }
+
+        .report-head {
+            border: 1px solid black;
+            border-bottom: none;
+            max-height: 35px;
+            padding: 2px 3% 4px 3%;
+            overflow: hidden;
+        }
+
+        .report-head > div {
+            width: 33.333%;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .sp-large {
+            font-size: 1.5em;
+            padding: 3px 15px;
+        }
+
+        .report-table {
+            width: 100%;
+            padding: 2px 1% 0px 1%;
+            border: 1px solid gray;
+            border-top: none;
+        }
+
+        .report-table th {
+            background: #d0d0d0;
+            font-size: 0.8em;
+        }
+
+        .report-table tfoot > tr > td {
+            background: #d0d0d0;
+        }
+
+        .report-table th,
+        .report-table td {
+            border-top: 1px solid lightgray;
+            border-left: 1px solid lightgray;
+            margin: 0 !important;
+            max-width: 10px !important;
+            text-overflow: clip;
+            text-align: center;
+            font-size: 0.8em;
+        }
+    </style>
+    <script>
+      window.onload = function() {
+        alert('Page loaded');
+      };
+    </script>
+</head>
+<body onload="alert('Page loaded');">
+<div>

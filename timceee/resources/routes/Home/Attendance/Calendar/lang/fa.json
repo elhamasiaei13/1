@@ -1,0 +1,22 @@
+{
+  "Calendar": "تقویم",
+  "Calendar Form": "فرم تقویم",
+  "Name": "نام تقویم",
+  "Description": "توضیحات تقویم",
+  "Edit Days": "ویرایش روزها",
+  "Setting Dates": "تنظیم تاریخ‌ها",
+  "Day Type": "نوع روز",
+  "Indexing Calendars Failed": "دریافت تقویم‌ها با خطا مواجه شد",
+  "Indexing Calendar Failed": "دریافت تقویم با خطا مواجه شد",
+  "Indexing Day Types Failed": "دریافت نوع روزها با خطا مواجه شد",
+  "Adding New Calendar": "افزودن تقویم جدید",
+  "New Calendar Added Successfully": "تقویم با موفقیت ثبت شد",
+  "Adding New Calendar Failed": "افزودن تقویم با خطا مواجه شد",
+  "Updating Calendar": "بروزرسانی تقویم",
+  "Calendar Updated Successfully": "تقویم با موفقیت بروزرسانی شد",
+  "Updating Calendar Failed": "بروزرسانی تقویم با خطا مواجه شد",
+  "Removing Calendar": "حذف تقویم",
+  "Calendar Removed Successfully": "تقویم با موفقیت حذف شد",
+  "Removing Calendar Failed": "حذف تقویم با خطا مواجه شد",
+  "Are you sure about removing calendar": "آیا از حذف تقویم {{calendar}} مطمئن هستید ؟"
+}

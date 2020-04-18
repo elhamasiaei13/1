@@ -1,0 +1,6 @@
+<tfoot>
+    <tr>
+        {{tableFooter}}
+    </tr>
+    </tfoot>
+</table>

@@ -1,0 +1,690 @@
+html[data-direction="rtl"],
+body[data-direction="rtl"]
+  direction rtl
+  font-family Samim, sans-serif
+  @font-face
+    font-family Samim
+    src url(./../fonts/samim/Samim-FD.eot)
+    src url(./../fonts/samim/Samim-FD.eot?#iefix) format('embedded-opentype'), url(./../fonts/samim/Samim-FD.woff) format('woff'), url(./../fonts/samim/Samim-FD.ttf) format('truetype')
+    font-weight normal
+  @font-face
+    font-family Samim
+    src url(./../fonts/samim/Samim-Bold-FD.eot);
+    src url(./../fonts/samim/Samim-Bold-FD.eot?#iefix) format('embedded-opentype'), url(./../fonts/samim/Samim-Bold-FD.woff) format('woff'), url(./../fonts/samim/Samim-Bold-FD.ttf) format('truetype')
+    font-weight bold
+  .left
+    float right
+  .right
+    float left
+  .left-
+    &\0
+      right 0
+    &\1
+      right 1px
+  .right-
+    &\0
+      left 0
+    &\1
+      left 1px
+  .drawer
+    .ant-menu-item
+    .ant-menu-submenu-title
+      .anticon
+      .mdi
+        margin-right 0
+        margin-left 8px
+  .ant-menu-inline
+  .ant-menu-vertical
+    .ant-menu-item
+      &:after
+        border-right 0
+        border-left 3px solid #108ee9
+        right auto
+        left 0
+  .ant-menu-submenu-inline > .ant-menu-submenu-title:after
+    right auto
+    left 16px
+
+  .ant-menu-submenu-inline > .ant-menu-inline > .ant-menu-item
+    padding-left 16px !important
+    padding-right 48px
+
+  .ant-menu-submenu-inline > .ant-menu-inline > .ant-menu-submenu-inline > .ant-menu-inline > .ant-menu-item
+    padding-left 16px !important
+    padding-right 72px
+
+  .ant-menu-sub.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title
+    padding-left 16px !important
+    padding-right 48px
+
+  .ant-breadcrumb
+    span
+      float right
+
+  .ant-menu-horizontal > .ant-menu-item
+  .ant-menu-horizontal > .ant-menu-submenu
+    float right
+  .ant-layout-header
+    .logo
+      //margin 16px 0 16px 28px
+      float right
+  .side-nav
+    left 0
+    &.side-nav-collapsed
+      left -256px
+    .drawer-menu
+      right 0
+  .nav
+    ul
+      &.ant-menu
+        float left
+    .hamburger-menu
+      left -32px
+  .hamburger
+    svg
+      transform scaleX(-1)
+  .ant-input-affix-wrapper
+    .ant-input
+      &:not(:last-child)
+        padding-right 7px
+        padding-left 24px
+    .ant-input-suffix
+      right auto
+      left 7px
+    .ant-input-prefix
+      left auto
+      right 7px
+  .redux-password
+    .ant-input-affix-wrapper
+      .ant-input
+        &:not(:last-child)
+          padding-left 25px
+    .has-feedback
+      .ant-input-affix-wrapper
+        .ant-input
+          &:not(:last-child)
+            padding-left 50px
+  .has-feedback
+    .redux-password
+      .ant-input-affix-wrapper
+        .ant-input
+          &:not(:last-child)
+            padding-left 50px
+  .ant-input-group
+    &.ant-input-group-compact > *:first-child
+    > .ant-input-affix-wrapper:not(:last-child) .ant-input
+    &.ant-input-group-compact > .ant-select:first-child > .ant-select-selection
+      border-top-left-radius 0
+      border-bottom-left-radius 0
+      border-top-right-radius 4px
+      border-bottom-right-radius 4px
+  .ant-input-group
+    &.ant-input-group-compact > *:last-child
+    > .ant-input-affix-wrapper:not(:first-child) .ant-input
+      border-top-right-radius 0
+      border-bottom-right-radius 0
+      border-top-left-radius 4px
+      border-bottom-left-radius 4px
+    &.ant-input-group-compact > .ant-select > .ant-select-selection
+      border-right-width 1px
+    &.ant-input-group-compact
+      > *
+        &:last-child
+          border-right-width 0
+          border-left-width 1px
+  //.ant-menu-inline .ant-menu-item
+  //.drawer-menu
+  //  .ant-menu-sub
+  //    li
+  //      padding-left 16px !important
+  //      padding-righ 48px !important
+  .ant-menu-submenu-vertical > .ant-menu
+  .ant-layout-sider-collapsed .drawer-menu .ant-menu-inline
+    right 100%
+    margin-right 4px
+    padding-right 0 !important
+  .ant-menu-submenu-vertical > .ant-menu > .ant-menu-item:first-child
+  .ant-layout-sider-collapsed .drawer-menu .ant-menu-inline > .ant-menu-item:first-child
+    border-radius 4px 0 0 4px
+  .ant-menu-submenu-vertical > .ant-menu .ant-menu-item
+  .ant-layout-sider-collapsed .drawer-menu .ant-menu-inline .ant-menu-item
+    border-left 0
+    margin-right 0
+    right 0
+  .ant-menu-submenu-vertical > .ant-menu li
+  .ant-menu-submenu-vertical > .ant-menu .ant-menu-item
+  .ant-layout-sider-collapsed .drawer-menu .ant-menu-inline li
+  .ant-layout-sider-collapsed .drawer-menu .ant-menu-inline .ant-menu-item
+    padding 0 16px !important
+  .ant-menu-submenu-vertical > .ant-menu .ant-menu-submenu-title
+  .ant-layout-sider-collapsed .drawer-menu .ant-menu-inline .ant-menu-submenu-title
+    padding 0 !important
+  .ant-menu-submenu-inline > .ant-menu-submenu-title:after
+  .ant-menu-submenu-vertical > .ant-menu-submenu-title:after
+    left 16px
+    right auto
+  .drawer .ant-menu-submenu-vertical > .ant-menu-submenu-title:after
+    content "\E61E"
+  .ant-layout-sider-collapsed
+    .drawer-menu
+      .ant-menu-inline
+        .ant-menu-submenu-title
+          &:after
+            -ms-filter "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)"
+            transform rotate(270deg) scale(.75)
+  .listview
+    .icon
+      margin-left 8px
+    .avatar
+      margin-left 8px
+  .ant-table-wrapper
+    tbody
+      text-align right
+    .ant-table-pagination
+      float left
+  .ant-pagination-prev a:after
+    content "\E61F"
+  .ant-pagination-next a:after
+    content "\E620"
+  [class^="ant-col-"]
+  [class*=" ant-col-"]
+  .ant-steps-vertical .ant-steps-head
+    float right
+  .ant-steps-vertical > .ant-steps-item > .ant-steps-tail
+    left auto
+    right 13px
+  .ant-steps-vertical
+    .ant-steps-head-inner
+      margin-right 0
+      margin-left 16px
+  .ant-steps
+    .ant-steps-title
+      padding-right 0
+      padding-left 10px
+  .ant-btn-group > .ant-btn
+  .ant-btn-group > span > .ant-btn
+    border-radius 4px
+    border-left-width: 0px
+    &:first-child
+      &:not(:last-child)
+        border-bottom-left-radius: 0
+        border-top-left-radius: 0
+        border-bottom-right-radius: 4px
+        border-top-right-radius: 4px
+        border-left-width: 0px
+    &:last-child
+      border-left-width: 1px
+      &:not(:first-child)
+        border-bottom-right-radius 0
+        border-top-right-radius 0
+        border-bottom-left-radius: 4px
+        border-top-left-radius: 4px
+  .ant-btn-group
+    .ant-btn-primary + .ant-btn-primary
+    .ant-btn-group .ant-btn-primary:last-child:not(:first-child)
+      border-left-color transparent
+      border-right-color #0e77ca
+  .ant-btn > .anticon + span
+  .ant-btn > span + .anticon
+    margin-left auto
+    margin-right .5em
+  .has-error.has-feedback
+  .has-success.has-feedback
+  .has-warning.has-feedback
+  .is-validating.has-feedback
+    &:after
+      right auto
+      left 0
+  .ant-form-item-label
+    text-align left
+    label
+      &:after
+        margin 0 2px 0 8px
+  .ant-select-arrow
+    right auto
+    left 8px
+  .ant-select-selection-selected-value
+    float right
+    padding-right 0
+    padding-left 14px
+  .ant-table-selection
+    text-align center !important;
+  .ant-table-thead > tr > th
+    text-align right !important
+  [class*='ant-col-']
+    div
+      &.ant-form-item
+        .ant-cascader-picker-clear
+          right auto
+          left 24px
+        .has-feedback
+          //.ant-input
+          //  padding-left 28px
+          //.ant-input-number
+          //  padding-left 24px
+          .ant-select .ant-select-arrow
+          .ant-cascader-picker .ant-cascader-picker-arrow
+            right auto
+            left 28px
+          .ant-cascader-picker-clear
+            left 44px
+  .ant-form-item-required
+    &:before
+      margin-right 0
+      margin-left 4px
+  .ant-card-extra
+    right auto
+    left 24px
+  .ant-modal-close
+    right auto
+    left 0
+  .ant-modal-header
+    text-align right
+  .ant-modal-footer
+    text-align left
+  .ant-modal-footer button + button
+    margin-left 0
+    margin-right 8px
+  .ant-tree
+    li
+      ul
+        padding 0 18px 0 0
+  .ant-tree li span.ant-tree-switcher.ant-tree-switcher_close:after {
+    -webkit-transform: rotate(90deg) scale(.59);
+    transform: rotate(90deg) scale(.59);
+  }
+
+  .jTreeSearch .find {
+    right: auto;
+    left:0px;
+  }
+
+  .anticon-left:before {
+    content: "\E61F";
+  }
+  .anticon-right:before {
+    content: "\E620";
+  }
+  .ant-confirm-body > .anticon {
+    margin-left: 16px;
+    padding: 0 1px;
+    float: right;
+  }
+  .ant-confirm-body
+    .ant-confirm-content
+      margin-left 0
+      margin-right 42px
+  .ant-dropdown-menu-item
+    text-align right
+  .ant-input-affix-wrapper
+    .ant-input-prefix
+      left auto
+      right 7px
+    .ant-input
+      &:not(:first-child)
+        padding-left 7px
+        padding-right 28px
+  .ant-calendar-picker-clear
+  .ant-calendar-picker-icon
+    right auto
+    left 8px
+
+  .redux-password
+    .ant-form-item-control
+      &.has-feedback
+        .ant-input-suffix
+          left 31px
+
+  .has-feedback
+    &.ant-form-item-control
+      .redux-password
+        .ant-input-suffix
+          left 31px
+
+  .border-end {
+    border-left: 1px solid #e4e4e4;
+  }
+  .ant-confirm .ant-confirm-btns{
+    float:left;
+  }
+  .ant-confirm .ant-confirm-btns button + button
+    margin-left 0
+    margin-right 16px
+
+  .extra-toolbar > div
+    float left
+
+  .phone input + span.ant-input-suffix
+    direction ltr
+  .ant-input-affix-wrapper .ant-input:not(:last-child) {
+    padding-left: 32px;
+  }
+  .table-search ,
+  .table-search-value {
+    margin-right: 8px
+  }
+
+  .request-table .ant-table-footer .ant-pagination
+    float left
+  .ant-input-affix-wrapper .ant-input-prefix ~ .ant-input {
+    padding-right: 24px;
+  }
+  .request-steper .ant-steps-item{
+    margin-right:0px !important;
+    margin-left: -79px;
+  }
+  .request-steper .ant-steps-head-inner{
+    margin-right:0px !important;
+    margin-left: 10px;
+  }
+
+  .request-steper .ant-steps.ant-steps-small .ant-steps-title{
+    font-weight: 100 !important;
+  }
+  .request-steper .ant-steps-tail{
+    padding-right: auto !important;
+    padding-left: 79px !important;
+  }
+  .request-steper.ant-steps-horizontal .ant-steps-item:not(:first-child) .ant-steps-head{
+    padding-left: 0px;
+    margin-left: 0px;
+    padding-right: 10px;
+    margin-right: -10px;
+  }
+  .ant-popover-inner-content{
+    direction: rtl;
+    text-align: right;
+  }
+  .select-span{
+    float:left;
+    padding-right:15px;
+  }
+
+  .ant-tree-title i.mdi.mdi-check , .ant-tree-title  i.mdi.mdi-none.false   {
+    padding: 0px 2px;
+    margin: 0px -11px 0px 3px;
+    font-size: 9px;
+  }
+  .ant-btn.ant-btn-loading:not(.ant-btn-circle):not(.ant-btn-circle-outline) {
+    padding-left: 15px;
+    padding-right: 29px;
+  }
+  .ant-btn.ant-btn-loading:not(.ant-btn-circle):not(.ant-btn-circle-outline) .anticon {
+    margin-left: 0px;
+    margin-right: -14px;
+  }
+  .ant-btn .anticon {
+    transition: margin-right 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition-property: margin-right;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition-delay: initial;
+  }
+  .chart .mdi-chevron-right:before {
+    content: "\F141";
+  }
+  .chart .mdi-chevron-left:before {
+    content: "\F142";
+  }
+  .ant-tabs-extra-content
+    float left !important
+
+  .ant-tabs-nav
+    .ant-tabs-tab
+      &:not(:last-child)
+        margin-right 0
+        margin-left 24px
+
+  .ant-tabs-tabpane
+    position absolute
+  .ant-cascader-menus
+    direction ltr
+  .vertical-center-modal .ant-modal
+    text-align right;
+  .ant-cascader-picker-arrow
+    right auto
+    left 8px
+  .ant-cascader-input
+    text-align right
+  .ant-radio-button-wrapper
+    &:first-child
+      border-radius 0 4px 4px 0
+    &:last-child
+      border-radius 4px 0 0 4px
+
+  .ant-modal {
+    text-align: right;
+  }
+  .ant-btn-group .ant-btn-primary[disabled] + .ant-btn-primary,
+  .ant-btn-group .ant-btn-primary[disabled] + .ant-btn-primary,
+  .ant-btn-group .ant-btn-group .ant-btn-primary[disabled]:last-child:not(:first-child),
+  .ant-btn-group .ant-btn-group .ant-btn-primary[disabled]:last-child:not(:first-child){
+    border-right-color #d3d3d3
+  }
+  .ant-input-group > .ant-input:first-child
+  .ant-input-group-addon:first-child
+    border-bottom-right-radius 4px
+    border-top-right-radius 4px
+    border-bottom-left-radius 0
+    border-top-left-radius 0
+  .ant-input-group-addon
+    &:first-child
+      border-right 1px solid #d9d9d9
+      border-left 0
+  .ant-input-group > .ant-input:last-child
+  .ant-input-group-addon:last-child
+    border-bottom-right-radius 0
+    border-top-right-radius 0
+    border-bottom-left-radius 4px
+    border-top-left-radius 4px
+  .ant-input-group-addon
+    &:last-child
+      border-left 1px solid #d9d9d9
+      border-right 0
+  .ant-message
+    .anticon
+      margin-right 0
+      margin-left 8px
+
+  .ant-col-offset-2 {
+    margin-left: auto;
+    margin-right: 8%;
+  }
+  .ant-table .ant-table-row-indent + .ant-table-row-expand-icon {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+  .highcharts-root {
+    font-family: Samim, sans-serif !important
+  }
+  .mdi-arrow-left-thick:before{
+    content: "\F055";
+  }
+  .notes{
+    direction: rtl;
+  }
+  .rejectReason .dateInfo ,
+  .notes .dateInfo{
+    float:left;
+  }
+  .nav .ant-menu-submenu-horizontal > .ant-menu {
+    padding:0px;
+  }
+  li.ant-menu-item.jActive:before {
+    right: auto;
+    left: 2px;
+    transform: rotate(45deg);
+  }
+
+  .StateDiagram > div{
+    padding-right: 25px;
+    padding-left: 0px;
+  }
+
+  .StateDiagram > div:before{
+    top: 0px;
+    right: 0px;
+    transform: rotate(45deg);
+    margin-right: -15px;
+    margin-left: 0px;
+  }
+  .StateDiagram > div:first-of-type{
+    border-right: 2px solid #fff;
+    border-left: 0px solid #fff;
+    border-radius: 0px 10px 10px 0px;
+  }
+
+  .StateDiagram > div:last-of-type{
+    border-left: 2px solid #fff;
+    border-right: 0px solid #fff;
+    padding-left: 0px;
+    padding-right: 10px;
+    border-radius: 10px 0px 0px 10px;
+  }
+
+  .StateDiagram > div > span{
+    padding: 0px 7px;
+  }
+  .listTooltip{
+    text-align: right;
+  }
+  .listTooltip > span {
+    float: right;
+    margin-left:6px;
+    margin-right:0px;
+  }
+  .listTooltip > i {
+    float: left;
+    margin-right:0px;
+    margin-left:0px;
+  }
+  .ant-col-push-10 {
+    left: auto;
+    right: 41.66666667%;
+  }
+  .form-item-input
+    textarea
+      padding-left 52px !important
+    .has-feedback
+      textarea
+        padding-left 80px !important
+    .has-feedback:after
+      left 50px
+  .ui-widget {
+    font-family: Samim;
+  }
+  .ant-select-dropdown-menu-item i{
+    float: left;
+    margin: auto 5px;
+  }
+  .ant-select-selection-selected-value i{
+    float: right;
+    margin: auto 5px;
+  }
+  samp{
+    font-family Samim, sans-serif
+  }
+  .appLogs li.logDate ul:after {
+    border-right: 1px solid #e1e1e1;
+    border-left: 0px solid #e1e1e1;
+    margin-right: 17px;
+  }
+  .appLogs li.logDate ul.logsDate li.log span.icon {
+    padding: 0px 0px 0px 15px;
+  }
+  .appLogs li.logDate ul.logsDate li.log span.icon i{
+    padding: 2px 7px;
+  }
+  .ant-input-group.ant-input-group-compact > * {
+      border-right-width: 1px;
+      border-left-width: 0;
+  }
+  .customReport li > i {
+    left: 7px;
+    right: auto;
+  }
+  .customReport .toolbar .addBox {
+    float: left;
+  }
+  .customReport .toolbar .toolBox{
+    float: right;
+  }
+  .jModal-footer-toolbar{
+    float: right;
+  }
+  .ant-pagination-item ,
+  .ant-pagination-prev, .ant-pagination-next, .ant-pagination-jump-prev, .ant-pagination-jump-next {
+    font-family: Samim;
+  }
+  .ant-pagination-item ,
+  .ant-pagination-prev, .ant-pagination-jump-prev, .ant-pagination-jump-next {
+    margin-right: 0px;
+    margin-left: 8px;
+  }
+  .ant-btn-group .ant-btn + .ant-btn, .ant-btn + .ant-btn-group, .ant-btn-group + .ant-btn, .ant-btn-group + .ant-btn-group {
+    margin-left: 0;
+    margin-right: -1;
+  }
+  .ant-btn-group span:not(:first-child):not(:last-child) .ant-btn {
+    border-radius: 0;
+  }
+  .ant-btn-group > span:first-child:not(:last-child) > .ant-btn {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    border-left-width: 0px;
+  }
+  .status {
+    left: auto;
+    right: 0px;
+  }
+  .ant-notification-notice-closable .ant-notification-notice-message {
+    padding-right: 0px;
+    padding-left: 24px;
+  }
+  .ant-notification-notice-with-icon .ant-notification-notice-description {
+    margin-left: 0px;
+    margin-right: 48px;
+  }
+  .ant-notification-notice-with-icon .ant-notification-notice-message {
+    margin-left: 0px;
+    margin-right: 48px;
+  }
+  .ant-notification-notice-close{
+    left: 16px;
+    right: auto;
+  }
+
+  .highcharts-label{
+    direction: rtl;
+    text-align: right;
+  }
+  .highcharts-label span b{
+    direction: ltr;
+    text-align: right;
+    display inline-block;
+  }
+  .has-feedback
+    .ant-input-affix-wrapper
+      .ant-input:not(:first-child)
+        padding-left 30px
+  .has-feedback
+    input:not([type])
+    input[type='number']
+    input[type='text']
+    input[type='password']
+    input[type='email']
+    input[type='tel']
+    textarea
+    select
+      padding-left 30px
+//.form-item-input
+  //  .ant-input
+  //    padding-left 40px !important
+//.ant-btn-group
+//  .ant-btn-primary
+//    &:first-child
+//      &:not(:last-child)
+//        border-right-color: transparent;
+//        border-left-color: #0e77ca;

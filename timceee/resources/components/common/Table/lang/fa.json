@@ -1,0 +1,23 @@
+{
+  "one item should be selected at list": "حداقل یک ستون باید انتخاب شده بماند",
+  "showTitle": "نمایش عنوان",
+  "showFooter": "نمایش مجموع",
+  "true": "بله",
+  "false": "خیر",
+  "Separator": "جدا کننده",
+  "Default": "پیش فرض",
+  "YMD": "تاریخ بدون فاصله",
+  "YMDHIS": "تاریخ و ساعت بدون فاصله",
+  "HIS": "ساعت بدون فاصله",
+  "H-I-S": "ساعت",
+  "Y-M-D": "تاریخ با فرمت −",
+  "Y_M_D": "تاریخ با فرمت /",
+  "Y-M-D-H-I-S": "تاریخ و ساعت با فرمت −",
+  "Y_M_D-H-I-S": "تاریخ و ساعت با فرمت /",
+  "save CustomReports success": "خروجی با موفقیت ذخیره شد",
+  "save CustomReports fault": "ذخیره خروجی با شکست روبرو شد",
+  "load CustomReports success": "بارگزاری موفقیت آمیز بود",
+  "load CustomReports fault": "بارگزاری با شکست روبرو شد",
+  "Default null": "بدون فاصله",
+  "INT" : "تبدیل به عدد صحیح"
+}

@@ -1,0 +1,17 @@
+{
+  "SpiderChart CardView Title": "",
+  "SpiderChart Title": "",
+  "PieChart CardView Title": "آخرین وضعیت پرسنل",
+  "PieChart Title": "",
+  "FixedPlacementChart CardView Title": "",
+  "FixedPlacementChart Title": "",
+  "HeatMapChart CardView Title": "",
+  "HeatMapChart Title": "",
+  "HeatMapChart TooltipText": "",
+  "BasicColumnChart CardView Title": "ماموریت − مرخصی و اضافه کار",
+  "BasicColumnChart Title": "",
+  "DrillDownChart CardView Title": "اضافه کار در طول سال",
+  "DrillDownChart Title": "اضافه کار دپارتمان ها",
+  "DrillDownChart TooltipText": "دپاتمان",
+  "DrillDownChart BackTo": "بازگشت به {{to}}ها»"
+}

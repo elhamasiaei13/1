@@ -1,0 +1,22 @@
+{
+  "Calendar": "Calendar",
+  "Calendar Form": "Calendar Form",
+  "Name": "Calendar Name",
+  "Description": "Calendar Description",
+  "Edit Days": "Edit Days",
+  "Setting Dates": "Setting Dates",
+  "Day Type": "Day Type",
+  "Indexing Calendars Failed": "Indexing Calendars Failed",
+  "Indexing Calendar Failed": "Indexing Calendar Failed",
+  "Indexing Day Types Failed": "Indexing Day Types Failed",
+  "Removing Calendar": "Removing Calendar",
+  "Adding New Calendar": "Adding New Calendar",
+  "New Calendar Added Successfully": "New Calendar Added Successfully",
+  "Adding New Calendar Failed": "Adding New Calendar Failed",
+  "Updating Calendar": "Updating Calendar",
+  "Calendar Updated Successfully": "Calendar Updated Successfully",
+  "Updating Calendar Failed": "Updating Calendar Failed",
+  "Calendar Removed Successfully": "Calendar Removed Successfully",
+  "Removing Calendar Failed": "Removing Calendar Failed",
+  "Are you sure about removing calendar": "Are you sure about removing calendar {{calendar}} ?"
+}

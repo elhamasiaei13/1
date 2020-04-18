@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="version" content="11;0.2.2">
+
+  <title>Jahan Gostar Pars Raden</title>
+
+  <link rel="stylesheet" href="/src/app.css" />
+
+  <script>
+    document.getElementsByTagName("html")[0].setAttribute("lang", localStorage.getItem('language') || 'fa');
+    document.getElementsByTagName("html")[0].setAttribute("data-direction", localStorage.getItem('data-direction') || 'rtl');
+  </script>
+
+</head>
+
+<body>
+
+  <div id="root" class="wrapper"></div>
+
+  <script>
+    document.getElementsByTagName("body")[0].setAttribute("data-direction", localStorage.getItem('data-direction') || 'rtl');
+  </script>
+
+  <script rel="script" type="application/javascript" src="/src/app.js" defer></script>
+
+  <script rel="script" type="application/javascript" src="/src/js/jquery-1.9.1.js" defer></script>
+  <script rel="script" type="application/javascript" src="/src/js/jquery-ui-1.10.2.custom.min.js" defer></script>
+  <script rel="script" type="application/javascript" src="/src/js/primitives.min.js" defer></script>
+  <script rel="script" type="application/javascript" src="/src/js/bporgeditor.min.js" defer></script>
+
+</body>
+
+</html>

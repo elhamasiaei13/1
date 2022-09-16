@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.17.1",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "bootstrap-rtl": "^3.3.4",
     "font-awesome": "^4.7.0",
     "lodash.merge": "^4.6.0",
